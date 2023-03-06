@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../pages/Home";
+import NotFound from "../layouts/NotFound";
+import NotFoundPage from "../components/404";
 
 const routes = createBrowserRouter([
     {
@@ -11,11 +13,21 @@ const routes = createBrowserRouter([
                 path: "/",
                 element: <Home />,
             },
+            {
+                path: "/contact",
+                element: <Home />,
+            },
         ]
     },
     {
         path: "*",
-        element: <div>404</div>,
+        element: <NotFound></NotFound>,
+        children: [
+            {
+                path: "*",
+                element: <NotFoundPage />,
+            }
+        ]
     },
 ]);
 

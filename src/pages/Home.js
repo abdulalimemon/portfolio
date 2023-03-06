@@ -1,9 +1,11 @@
 import React from 'react';
+import ComingSoon from './ComingSoon/ComingSoon';
 
 const Home = () => {
     return (
         <div>
-            home
+           <h2>Home</h2>
+           <ComingSoon></ComingSoon>
         </div>
     );
 };
