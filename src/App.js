@@ -1,10 +1,11 @@
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import ComingSoon from './pages/ComingSoon/ComingSoon';
+import routes from './routes/routes';
 
 function App() {
   return (
     <>
-      <ComingSoon></ComingSoon>
+      <RouterProvider router={routes}></RouterProvider>
     </>
   );
 }
