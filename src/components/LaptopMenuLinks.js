@@ -8,7 +8,7 @@ const LaptopMenuLinks = () => {
                 <li>
                     <NavLink to='/' className={({ isActive }) =>
                         isActive
-                            ? "border-b-2 text-primary font-semibold mr-2 border-[#36D399]"
+                            ? "border-b-2 text-secondary font-semibold mr-2 border-secondary"
                             : "text-neutral mr-2"}>
                         Home
                     </NavLink>
@@ -16,7 +16,7 @@ const LaptopMenuLinks = () => {
                 <li>
                     <NavLink to='/jj' className={({ isActive }) =>
                         isActive
-                            ? "border-b-2 mr-2 border-[#36D399]"
+                            ? "border-b-2 text-secondary font-semibold mr-2 border-secondary"
                             : "text-neutral mr-2"}>
                         Home
                     </NavLink>
@@ -24,7 +24,7 @@ const LaptopMenuLinks = () => {
                 <li>
                     <NavLink to='/' className={({ isActive }) =>
                         isActive
-                            ? "border-b-2 text-primary font-semibold mr-2 border-[#36D399]"
+                            ? "border-b-2 text-secondary font-semibold mr-2 border-secondary"
                             : "text-neutral mr-2"}>
                         Home
                     </NavLink>
@@ -32,7 +32,7 @@ const LaptopMenuLinks = () => {
                 <li>
                     <NavLink to='/jj' className={({ isActive }) =>
                         isActive
-                            ? "border-b-2 mr-2 border-[#36D399]"
+                            ? "border-b-2 text-secondary font-semibold mr-2 border-secondary"
                             : "text-neutral mr-2"}>
                         Home
                     </NavLink>
