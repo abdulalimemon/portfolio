@@ -10,7 +10,7 @@ const NotFoundPage = () => {
                         <span className="sr-only">Error</span>404
                     </h2>
                     <p className="text-2xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
-                    <p className="mt-4 mb-8 dark:text-gray-400">But don't worry, you can find many other things on my homepage.</p>
+                    <p className="mt-4 mb-8 text-gray-400">But don't worry, you can find many other things on my homepage.</p>
                     <Link rel="noopener noreferrer" to='/' className="px-8 py-3 font-semibold rounded bg-secondary text-gray-900">Back to homepage</Link>
                 </div>
             </div>

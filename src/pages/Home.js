@@ -1,11 +1,11 @@
 import React from 'react';
-import ComingSoon from './ComingSoon/ComingSoon';
+import GetInTouch from '../components/GetInTouch';
 
 const Home = () => {
     return (
         <div>
            <h2>Home</h2>
-           <ComingSoon></ComingSoon>
+           <GetInTouch></GetInTouch>
         </div>
     );
 };

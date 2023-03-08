@@ -6,6 +6,7 @@ import { BsGithub, BsFacebook } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa';
 import LaptopMenuLinks from './LaptopMenuLinks';
 import emon from '../assets/emon.png';
+import Footer from './Footer';
 
 const NavBar2 = () => {
     return (
@@ -17,14 +18,14 @@ const NavBar2 = () => {
                     <div className="container mx-auto navbar">
                         <div className="navbar-start">
                             <Link to='/' className="font-bold text-xl md:ml-0">
-                                <img className='w-48 h-11 md:h-14' src={emon} alt="Emon" />
+                                <img className='w-40 md:w-48 h-11 md:h-12' src={emon} alt="Emon" />
                             </Link>
                         </div>
                         <LaptopMenuLinks></LaptopMenuLinks>
                         <div className="navbar-end">
-                            <Link className="p-2 rounded-full bg-accent hover:bg-info text-secondary mr-2"><FaLinkedinIn className='w-5 h-5' /></Link>
-                            <Link className="p-2 rounded-full bg-accent hover:bg-info text-secondary mr-2"><BsGithub className='w-5 h-5' /></Link>
-                            <Link className="p-2 rounded-full bg-accent hover:bg-info text-secondary"><BsFacebook className='w-5 h-5' /></Link>
+                            <a className="p-2 rounded-full bg-accent hover:bg-info text-secondary mr-2" href='https://www.linkedin.com/in/abdulalimemon/' target="_blank" rel="noreferrer"><FaLinkedinIn className='w-5 h-5' /></a>
+                            <a href='https://github.com/Emon02' className="p-2 rounded-full bg-accent hover:bg-info text-secondary mr-2" target="_blank" rel="noreferrer"><BsGithub className='w-5 h-5' /></a>
+                            <a href='https://www.facebook.com/abdulalimemon02' className="p-2 rounded-full bg-accent hover:bg-info text-secondary" target="_blank" rel="noreferrer"><BsFacebook className='w-5 h-5' /></a>
                         </div>
                         <div className="flex-none lg:hidden">
                             <label htmlFor="Navbar-drawer" className=" lg:hidden">
@@ -36,6 +37,7 @@ const NavBar2 = () => {
 
                 {/* <!-- Page content here --> */}
                 <Outlet></Outlet>
+                <Footer></Footer>
             </div>
             <div className="drawer-side">
                 <label htmlFor="Navbar-drawer" className="drawer-overlay"></label>
