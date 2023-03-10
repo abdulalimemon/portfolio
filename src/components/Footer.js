@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { BsGithub, BsFacebook } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { MdMarkEmailUnread } from 'react-icons/md';
-
 
 const Footer = () => {
     return (
@@ -22,6 +20,7 @@ const Footer = () => {
             <div>
                 <p className='text-primary'>Copyright © 2023 - All right reserved by Abdul Alim Emon.</p>
             </div>
+            
         </footer>
     );
 };
