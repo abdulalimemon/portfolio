@@ -32,9 +32,9 @@ const BackToTop = () => {
             <button
                 type='button'
                 onClick={scrollToTop}
-                className={`inline-flex items-center p-3 rounded-full shadow-sm text-white bg-pink-600 transition-opacity hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 overflow-y-auto focus:ring-pink-500 ${isVisible ? 'flex' : 'hidden'}`}
+                className={`inline-flex items-center p-1 md:p-3 rounded-full shadow-lg text-base-100 bg-secondary hover:opacity-80 transition-opacity overflow-y-auto ${isVisible ? 'flex' : 'hidden'}`}
             >
-                <BiUpArrowAlt className='h-6 w-6' aria-hidden='true' />
+                <BiUpArrowAlt className='h-5 md:h-6 w-5 md:w-6' aria-hidden='true' />
             </button>
         </div>
     );

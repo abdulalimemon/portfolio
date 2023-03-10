@@ -3,6 +3,7 @@ import Main from "../layouts/Main";
 import Home from "../pages/Home";
 import NotFound from "../layouts/NotFound";
 import NotFoundPage from "../components/404";
+import ContactUs from "../pages/ContactUs";
 
 const routes = createBrowserRouter([
     {
@@ -15,7 +16,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: "/contact",
-                element: <Home />,
+                element: <ContactUs />,
             },
         ]
     },
