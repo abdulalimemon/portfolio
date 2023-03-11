@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
+import { MdOutlineError } from 'react-icons/md';
+import { BsEnvelopeCheckFill } from 'react-icons/bs';
 
 const ContactForm = () => {
+    const form = useRef();
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = (data) => { };
+    const onSubmit = (data) => {
+        emailjs.sendForm('process.env.EMAIL_JS_SERVICE_ID', 'process.env.EMAIL_JS_TEMPLATE_ID', form.current, 'process.env.EMAIL_JS_PUBLIC_KEY')
+            .then((result) => {
+                toast.success('Successfully toasted!', {
+                    icon: <BsEnvelopeCheckFill className='w-6 h-6 text-secondary'></BsEnvelopeCheckFill>,
+                    style: {
+                        borderRadius: '10px',
+                        background: '#112240',
+                        color: '#36D399',
+                    }
+                })
+            }, (error) => {
+                toast.error('Something went wrong please try again.', {
+                    icon: <MdOutlineError className='w-6 h-6 text-primary'></MdOutlineError>,
+                    style: {
+                        borderRadius: '10px',
+                        background: '#112240',
+                        color: '#ffffff',
+                    }
+                })
+            });
+    };
 
     return (
         <div className='py-16'>
@@ -16,8 +42,7 @@ const ContactForm = () => {
                     </div>
                     <img src="assets/svg/doodle.svg" alt="" className="p-6 h-52 md:h-64" />
                 </div>
-                <form action="https://formspree.io/f/myyapeyo"
-                    method="POST" className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
+                <form ref={form} className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <label className="text-sm">Full name</label>
                         <input
@@ -48,7 +73,7 @@ const ContactForm = () => {
                     <div>
                         <label htmlFor="email" className="text-sm">Email</label>
                         <input
-                            id="email" type="email"
+                            id="email" type="email" name='email'
                             className="input input-bordered text-sm w-full p-3 outline-none rounded bg-gray-800 hover:bg-gray-800 mt-2" placeholder="Enter your email."
                             aria-invalid={errors.email ? "true" : "false"}
                             {...register('email', {
@@ -58,7 +83,7 @@ const ContactForm = () => {
                                 },
                                 pattern: {
                                     value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                    message: 'Provide a valid email address.'
+                                    message: 'Please provide a valid email address.'
                                 }
                             })} />
 

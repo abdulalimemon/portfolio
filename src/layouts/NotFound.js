@@ -3,6 +3,8 @@ import { Outlet } from 'react-router-dom';
 import BackToTop from '../components/BackToTop';
 import Footer from '../components/Footer';
 import NavBar from '../components/Navbar';
+import { Toaster } from 'react-hot-toast';
+
 
 const NotFound = () => {
     return (
@@ -11,6 +13,7 @@ const NotFound = () => {
             <Outlet></Outlet>
             <Footer></Footer>
             <BackToTop></BackToTop>
+            <Toaster />
         </>
     );
 };

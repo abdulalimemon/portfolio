@@ -28,13 +28,13 @@ const BackToTop = () => {
     }, []);
 
     return (
-        <div className='fixed bottom-2 right-2'>
+        <div className='fixed bottom-4 right-4'>
             <button
                 type='button'
                 onClick={scrollToTop}
                 className={`inline-flex items-center p-1 md:p-3 rounded-full shadow-lg text-base-100 bg-secondary hover:opacity-80 transition-opacity overflow-y-auto ${isVisible ? 'flex' : 'hidden'}`}
             >
-                <BiUpArrowAlt className='h-5 md:h-6 w-5 md:w-6' aria-hidden='true' />
+                <BiUpArrowAlt className='h-6 w-6' aria-hidden='true' />
             </button>
         </div>
     );
