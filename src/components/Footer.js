@@ -4,6 +4,8 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { MdMarkEmailUnread } from 'react-icons/md';
 
 const Footer = () => {
+    const today = new Date();
+    const year = today.getFullYear();
     return (
         <footer className="footer footer-center p-10 bg-[#090A27] text-base-content rounded">
             <div className="grid grid-flow-col gap-3">
@@ -18,7 +20,7 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <p className='text-primary'>Copyright © 2023 - All right reserved by Abdul Alim Emon.</p>
+                <p className='text-primary'>Copyright © {year} - All right reserved by Abdul Alim Emon.</p>
             </div>
             
         </footer>

@@ -2,27 +2,28 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
-import { MdOutlineError } from 'react-icons/md';
+import { MdOutlineError, MdMarkEmailUnread } from 'react-icons/md';
 import { BsEnvelopeCheckFill } from 'react-icons/bs';
+import { IoHome } from 'react-icons/io5';
 
 const ContactForm = () => {
     const form = useRef();
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
-        emailjs.sendForm('process.env.EMAIL_JS_SERVICE_ID', 'process.env.EMAIL_JS_TEMPLATE_ID', form.current, 'process.env.EMAIL_JS_PUBLIC_KEY')
+        emailjs.sendForm('service_4qizxrk', 'template_tcrwuju', form.current, 'Yx6awojseorIqq-eL')
             .then((result) => {
-                toast.success('Successfully toasted!', {
-                    icon: <BsEnvelopeCheckFill className='w-6 h-6 text-secondary'></BsEnvelopeCheckFill>,
+                toast.success('Your message has been sent successfully. Thanks for your message.', {
+                    icon: <BsEnvelopeCheckFill className='w-7 h-7 text-secondary'></BsEnvelopeCheckFill>,
                     style: {
                         borderRadius: '10px',
                         background: '#112240',
-                        color: '#36D399',
+                        color: '#ffffff',
                     }
                 })
             }, (error) => {
                 toast.error('Something went wrong please try again.', {
-                    icon: <MdOutlineError className='w-6 h-6 text-primary'></MdOutlineError>,
+                    icon: <MdOutlineError className='w-7 h-7 text-primary'></MdOutlineError>,
                     style: {
                         borderRadius: '10px',
                         background: '#112240',
@@ -37,10 +38,23 @@ const ContactForm = () => {
             <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-5 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
                 <div className="flex flex-col justify-between">
                     <div className="space-y-2">
-                        <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>
-                        <div className="dark:text-gray-400">Vivamus in nisl metus? Phasellus.</div>
+                        <h2 className="text-4xl md:text-4xl font-bold leading-tight lg:text-5xl">Let's get in touch!</h2>
+                        <div className="dark:text-gray-400 py-5 lg:pr-10">
+                            <p className='text-lg'>If you have any questions or suggestions regarding any projects, please don't hesitate to contact me. To contact me, fill out the contact form or you can reach out to me via email. I will do my best to respond to your inquiry as soon as possible.</p>
+                        </div>
+                        <div className='pb-10'>
+                            <div className="space-y-4">
+                                <p className="flex items-center">
+                                    <IoHome className='w-7 h-7 mr-5 text-secondary'></IoHome>
+                                    <span>Rangpur, Bangladesh</span>
+                                </p>
+                                <p className="flex items-center">
+                                    <MdMarkEmailUnread className='w-7 h-7 mr-5 text-secondary'></MdMarkEmailUnread>
+                                    <span>abdulalimemon11@gmail.com</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="assets/svg/doodle.svg" alt="" className="p-6 h-52 md:h-64" />
                 </div>
                 <form ref={form} className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
                     <div>

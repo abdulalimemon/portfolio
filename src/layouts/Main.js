@@ -7,13 +7,13 @@ import { Toaster } from 'react-hot-toast';
 
 const Main = () => {
     return (
-        <>
+        <div>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
             <BackToTop></BackToTop>
             <Toaster />
-        </>
+        </div>
     );
 };
 
