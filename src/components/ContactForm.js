@@ -40,7 +40,7 @@ const ContactForm = () => {
                     <div className="space-y-2">
                         <h2 className="text-4xl md:text-4xl font-bold leading-tight lg:text-5xl">Let's get in touch!</h2>
                         <div className="dark:text-gray-400 py-5 lg:pr-10">
-                            <p className='text-lg'>If you have any questions or suggestions regarding any projects, please don't hesitate to contact me. To contact me, fill out the contact form or you can reach out to me via email. I will do my best to respond to your inquiry as soon as possible.</p>
+                            <p className='text-sm lg:text-lg'>If you have any questions or suggestions regarding any projects, please don't hesitate to contact me. To contact me, fill out the contact form or you can reach out to me via email. I will do my best to respond to your inquiry as soon as possible.</p>
                         </div>
                         <div className='pb-10'>
                             <div className="space-y-4">
