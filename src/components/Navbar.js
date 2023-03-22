@@ -9,7 +9,7 @@ import MobileMenu from './MobileMenu';
 const Navbar = () => {
     return (
         <>
-            <div className="navbar bg-[#090A27] py-0">
+            <div className="navbar bg-[#0C1222] py-0">
                 <div className='container mx-auto'>
                     <div className="navbar-start py-0">
                         <Link to='/' className="font-bold text-xl md:ml-0">

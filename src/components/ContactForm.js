@@ -34,23 +34,24 @@ const ContactForm = () => {
     };
 
     return (
-        <div className='py-16'>
+
+        <div className='py-16 bg-base-100 opacity-80'>
             <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-5 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
                 <div className="flex flex-col justify-between">
                     <div className="space-y-2">
                         <h2 className="text-4xl md:text-4xl font-bold leading-tight lg:text-5xl">Let's get in touch!</h2>
-                        <div className="dark:text-gray-400 py-5 lg:pr-10">
-                            <p className='text-sm lg:text-lg'>If you have any questions or suggestions regarding any projects, please don't hesitate to contact me. To contact me, fill out the contact form or you can reach out to me via email. I will do my best to respond to your inquiry as soon as possible.</p>
+                        <div className="text-white py-5 lg:pr-10">
+                            <p className='text-sm lg:text-base'>If you have any questions or suggestions regarding any projects, please don't hesitate to contact me. To contact me, fill out the contact form or you can reach out to me via email. I will do my best to respond to your inquiry as soon as possible.</p>
                         </div>
                         <div className='pb-10'>
                             <div className="space-y-4">
                                 <p className="flex items-center">
                                     <IoHome className='w-7 h-7 mr-5 text-secondary'></IoHome>
-                                    <span>Rangpur, Bangladesh</span>
+                                    <span className='text-white'>Rangpur, Bangladesh</span>
                                 </p>
                                 <p className="flex items-center">
                                     <MdMarkEmailUnread className='w-7 h-7 mr-5 text-secondary'></MdMarkEmailUnread>
-                                    <span>abdulalimemon11@gmail.com</span>
+                                    <span className='text-white'>abdulalimemon11@gmail.com</span>
                                 </p>
                             </div>
                         </div>
@@ -58,12 +59,12 @@ const ContactForm = () => {
                 </div>
                 <form ref={form} className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
                     <div>
-                        <label className="text-sm">Full name</label>
+                        <label className="text-sm text-white">Full name</label>
                         <input
                             id="name"
                             type="text"
                             placeholder="Enter your name."
-                            className="input text-sm input-bordered w-full p-3 rounded bg-gray-800 mt-2 "
+                            className="input text-sm input-bordered w-full p-3 rounded bg-gray-800 mt-2 text-white"
                             name='name'
                             aria-invalid={errors.name ? "true" : "false"}
                             {...register('name', {
@@ -85,10 +86,10 @@ const ContactForm = () => {
                         </label>
                     </div>
                     <div>
-                        <label htmlFor="email" className="text-sm">Email</label>
+                        <label htmlFor="email" className="text-sm text-white">Email</label>
                         <input
                             id="email" type="email" name='email'
-                            className="input input-bordered text-sm w-full p-3 outline-none rounded bg-gray-800 hover:bg-gray-800 mt-2" placeholder="Enter your email."
+                            className="input text-white input-bordered text-sm w-full p-3 outline-none rounded bg-gray-800 hover:bg-gray-800 mt-2" placeholder="Enter your email."
                             aria-invalid={errors.email ? "true" : "false"}
                             {...register('email', {
                                 required: {
@@ -109,10 +110,10 @@ const ContactForm = () => {
                         </label>
                     </div>
                     <div>
-                        <label htmlFor="subject" className="text-sm">Subject</label>
+                        <label htmlFor="subject" className="text-sm text-white">Subject</label>
                         <input
                             id="subject" type="text" name='subject'
-                            className="input input-bordered text-sm w-full p-3 rounded bg-gray-800 mt-2"
+                            className="input input-bordered text-sm w-full p-3 rounded bg-gray-800 mt-2 text-white"
                             placeholder="Enter your subject."
                             aria-invalid={errors.subject ? "true" : "false"}
                             {...register('subject', {
@@ -135,9 +136,9 @@ const ContactForm = () => {
                         </label>
                     </div>
                     <div>
-                        <label htmlFor="message" className="text-sm">Message</label>
+                        <label htmlFor="message" className="text-sm text-white">Message</label>
                         <textarea id="message" rows="3"
-                            className="textarea textarea-bordered text-sm w-full p-3 rounded bg-gray-800 mt-2"
+                            className="textarea textarea-bordered text-sm w-full p-3 rounded bg-gray-800 mt-2 text-white"
                             spellCheck="false"
                             placeholder="Enter your message."
                             name='message'
@@ -161,7 +162,7 @@ const ContactForm = () => {
                             </label>
                         </label>
                     </div>
-                    <button type="submit" className="w-full btn btn-outline btn-secondary normal-case text-sm btn-lg">Send Message</button>
+                    <button type="submit" className="w-full btn btn-outline btn-secondary normal-case text-sm btn-lg hover:text-white">Send Message</button>
                 </form>
             </div>
         </div>
