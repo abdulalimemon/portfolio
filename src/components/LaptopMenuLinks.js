@@ -15,22 +15,6 @@ const LaptopMenuLinks = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/jj' className={({ isActive }) =>
-                        isActive
-                            ? "border-b-2 text-secondary font-semibold mr-2 border-secondary"
-                            : "text-neutral mr-2"}>
-                        Home
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/' className={({ isActive }) =>
-                        isActive
-                            ? "border-b-2 text-secondary font-semibold mr-2 border-secondary"
-                            : "text-neutral mr-2"}>
-                        Home
-                    </NavLink>
-                </li>
-                <li>
                     <NavLink to='/contact' className={({ isActive }) =>
                         isActive
                             ? "border-b-2 text-secondary font-semibold mr-8 border-secondary"

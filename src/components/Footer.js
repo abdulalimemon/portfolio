@@ -7,10 +7,10 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div className='bg-color-section'>
-            <div className="footer footer-center p-10 bg-[#0C1222] opacity-80 text-base-content rounded">
+        <div className=''>
+            <div className="footer footer-center p-10 bg-[#0C1222] text-base-content rounded">
                 <div className="grid grid-flow-col gap-3">
-                    <h2 className='text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F5F7FA] to-[#B8C6DB]'>Abdul Alim Emon</h2>
+                    <h2 className='text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#eceef1] to-[#2263c4]'>Abdul Alim Emon</h2>
                 </div>
                 <div>
                     <div className="grid grid-flow-col gap-4">
@@ -21,7 +21,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p className='text-primary'>Copyright © {year} - All right reserved by Abdul Alim Emon.</p>
+                    <p className='text-neutral'>Copyright © {year} - All right reserved by Abdul Alim Emon.</p>
                 </div>
 
             </div>
