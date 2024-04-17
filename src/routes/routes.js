@@ -6,31 +6,30 @@ import NotFoundPage from "../components/404";
 import ContactUs from "../pages/ContactUs";
 
 const routes = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
         path: "/",
-        element: <Main></Main>,
-        children: [
-            {
-                path: "/",
-                element: <Home />,
-            },
-            {
-                path: "/contact",
-                element: <ContactUs />,
-            },
-        ]
-    },
-    {
+        element: <Home />,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <NotFound></NotFound>,
+    children: [
+      {
         path: "*",
-        element: <NotFound></NotFound>,
-        children: [
-            {
-                path: "*",
-                element: <NotFoundPage />,
-            }
-        ]
-    },
+        element: <NotFoundPage />,
+      },
+    ],
+  },
 ]);
-
 
 export default routes;
